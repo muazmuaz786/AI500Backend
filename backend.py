@@ -14,8 +14,8 @@ app.add_middleware(
 )
 
 
-API_NINJAS_KEY = "j6wbg2+LFPz7ktiFH7rVKA==cJg9Jx2gTe2ZWGdE"
-GROQ_API_KEY = "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"
+API_NINJAS_KEY = os.getenv("API_NINJAS_KEY")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 CITIES = {
     "tashkent": (41.3111, 69.2406),
@@ -174,3 +174,4 @@ async def full_aqi(request: Request):
             "mask": groq[3],
         }
     }
+
