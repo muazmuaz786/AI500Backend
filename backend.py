@@ -2,6 +2,7 @@ from fastapi import FastAPI, Request
 import requests
 from datetime import datetime, timedelta
 from fastapi.middleware.cors import CORSMiddleware
+import os
 
 app = FastAPI()
 
@@ -174,4 +175,5 @@ async def full_aqi(request: Request):
             "mask": groq[3],
         }
     }
+
 
